@@ -44,7 +44,7 @@ Since Flutter SDK is not available in this environment, the following validation
 
 ### Step 1: Install Dependencies
 ```bash
-cd /home/runner/work/balloon-studio/balloon-studio
+cd <project-root>  # Navigate to your project directory
 flutter pub get
 ```
 
