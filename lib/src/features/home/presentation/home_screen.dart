@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:balloon_design_studio/src/core/entitlements/entitlements_config.dart';
 import 'package:balloon_design_studio/src/core/entitlements/entitlements_provider.dart';
 
 class HomeScreen extends ConsumerWidget {
