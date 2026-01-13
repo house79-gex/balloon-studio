@@ -3,7 +3,7 @@ import 'package:cryptography/cryptography.dart';
 import 'package:balloon_design_studio/src/core/licensing/license_model.dart';
 
 /// Service for verifying license tokens using Ed25519 signatures
-/// 
+///
 /// TODO: TESTING MODE - Signature verification is currently BYPASSED
 /// To re-enable production license verification:
 /// 1. Set _testingModeBypassVerification to false
@@ -13,15 +13,17 @@ import 'package:balloon_design_studio/src/core/licensing/license_model.dart';
 class LicenseVerificationService {
   // TESTING MODE FLAG - Set to false to re-enable signature verification
   static const bool _testingModeBypassVerification = true;
-  
+
   // Public key for verification (this would be the actual public key in production)
   // TODO: Replace with actual Ed25519 public key before production deployment
   // This is a placeholder - in production, this should be hardcoded or securely stored
   // Example format: 'base64EncodedPublicKeyHere=='
+  // ignore: unused_field - TODO: Re-enable when license verification is restored (currently bypassed in testing mode)
   static const String _publicKeyBase64 = 'PLACEHOLDER_PUBLIC_KEY';
-  
+
+  // ignore: unused_field - TODO: Re-enable when license verification is restored (currently bypassed in testing mode)
   final Ed25519 _algorithm = Ed25519();
-  
+
   /// Verify a license token
   Future<bool> verifyToken(LicenseToken token) async {
     // TESTING MODE: Bypass signature verification
@@ -29,7 +31,7 @@ class LicenseVerificationService {
       // Return true to simulate a valid signature for testing
       return true;
     }
-    
+
     /* ORIGINAL SIGNATURE VERIFICATION CODE - COMMENTED OUT FOR TESTING
      * Uncomment this block when _testingModeBypassVerification is set to false
     try {
@@ -57,24 +59,24 @@ class LicenseVerificationService {
       return false;
     }
     */
-    
+
     // This return is only reachable when testing mode is disabled
     // It serves as a safe default if the above code is not uncommented
     return false;
   }
-  
+
   /// Extract license information from verified token
   LicenseInfo? extractLicenseInfo(LicenseToken token, String deviceId) {
     try {
       final dataBytes = base64Decode(token.data);
       final dataString = utf8.decode(dataBytes);
       final data = json.decode(dataString) as Map<String, dynamic>;
-      
+
       return LicenseInfo(
         email: data['email'] as String,
         issuedAt: DateTime.parse(data['issued_at'] as String),
-        expiresAt: data['expires_at'] != null 
-            ? DateTime.parse(data['expires_at'] as String) 
+        expiresAt: data['expires_at'] != null
+            ? DateTime.parse(data['expires_at'] as String)
             : null,
         maxDevices: data['max_devices'] as int? ?? 2,
         deviceId: deviceId,
@@ -84,9 +86,10 @@ class LicenseVerificationService {
       return null;
     }
   }
-  
+
   /// Validate a license token and extract information
-  Future<LicenseInfo?> validateLicense(String tokenString, String deviceId) async {
+  Future<LicenseInfo?> validateLicense(
+      String tokenString, String deviceId) async {
     // TESTING MODE: Return a mock Pro license without validation
     if (_testingModeBypassVerification) {
       return LicenseInfo(
@@ -98,7 +101,7 @@ class LicenseVerificationService {
         isValid: true,
       );
     }
-    
+
     /* ORIGINAL LICENSE VALIDATION CODE - COMMENTED OUT FOR TESTING
      * Uncomment this block when _testingModeBypassVerification is set to false
     final token = LicenseToken.parse(tokenString);
@@ -124,7 +127,7 @@ class LicenseVerificationService {
     
     return info;
     */
-    
+
     // This return is only reachable when testing mode is disabled
     // It serves as a safe default if the above code is not uncommented
     return null;
