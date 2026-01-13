@@ -4,10 +4,10 @@ import 'package:balloon_design_studio/src/core/licensing/license_model.dart';
 
 /// Service for verifying license tokens using Ed25519 signatures
 class LicenseVerificationService {
-  // Public key for verification (this would be the actual public key in production)
-  // TODO: Replace with actual Ed25519 public key before production deployment
-  // This is a placeholder - in production, this should be hardcoded or securely stored
-  static const String _publicKeyBase64 = 'PLACEHOLDER_PUBLIC_KEY';
+  // Public key for verification - Ed25519 public key for license validation
+  // This key is used to verify the signature of license tokens
+  // To change: Update this constant with the new base64-encoded Ed25519 public key
+  static const String _publicKeyBase64 = 'MUExUvgd6sSAkqCuy8GrprTxQzenOjzRqHk/+ycCK1A=';
   
   final Ed25519 _algorithm = Ed25519();
   
