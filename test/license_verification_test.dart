@@ -60,8 +60,8 @@ void main() {
         'max_devices': 2,
       };
       
-      // Base64 encode the JSON
-      final jsonString = '{"email":"test@example.com","issued_at":"${now.toIso8601String()}","expires_at":null,"max_devices":2}';
+      // Base64 encode the JSON using jsonEncode
+      final jsonString = jsonEncode(licenseData);
       final base64Data = base64.encode(utf8.encode(jsonString));
       
       final token = LicenseToken(

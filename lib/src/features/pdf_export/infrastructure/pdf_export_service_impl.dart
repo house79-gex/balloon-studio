@@ -1,4 +1,3 @@
-import 'dart:typed_data';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:balloon_design_studio/src/features/pdf_export/domain/export_service.dart';
@@ -10,6 +9,9 @@ import 'package:intl/intl.dart';
 /// PDF export service implementation
 class PdfExportServiceImpl implements PdfExportService {
   final EntitlementsConfig _entitlements;
+  
+  // Watermark text for free tier accessing professional export
+  static const String _freeWatermarkText = 'Versione gratuita';
   
   PdfExportServiceImpl(this._entitlements);
   
@@ -205,7 +207,7 @@ class PdfExportServiceImpl implements PdfExportService {
                     child: pw.Opacity(
                       opacity: 0.2,
                       child: pw.Text(
-                        'Versione gratuita',
+                        _freeWatermarkText,
                         style: pw.TextStyle(
                           fontSize: 80,
                           fontWeight: pw.FontWeight.bold,
