@@ -87,10 +87,10 @@ lib/src/core/
 The Ed25519 public key for verification is embedded in the app:
 
 ```dart
-static const String _publicKeyBase64 = 'PLACEHOLDER_PUBLIC_KEY';
+static const String _publicKeyBase64 = 'MUExUvgd6sSAkqCuy8GrprTxQzenOjzRqHk/+ycCK1A=';
 ```
 
-**Production**: Replace with actual public key from key pair generation.
+This is the production public key used for verifying license token signatures.
 
 ### Token Generation
 
