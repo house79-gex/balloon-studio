@@ -31,6 +31,7 @@ class LicenseVerificationService {
     }
     
     /* ORIGINAL SIGNATURE VERIFICATION CODE - COMMENTED OUT FOR TESTING
+     * Uncomment this block when _testingModeBypassVerification is set to false
     try {
       // Parse the data and signature
       final dataBytes = base64Decode(token.data);
@@ -57,7 +58,8 @@ class LicenseVerificationService {
     }
     */
     
-    // Unreachable when testing mode is disabled, but kept for compilation
+    // This return is only reachable when testing mode is disabled
+    // It serves as a safe default if the above code is not uncommented
     return false;
   }
   
@@ -98,6 +100,7 @@ class LicenseVerificationService {
     }
     
     /* ORIGINAL LICENSE VALIDATION CODE - COMMENTED OUT FOR TESTING
+     * Uncomment this block when _testingModeBypassVerification is set to false
     final token = LicenseToken.parse(tokenString);
     if (token == null) return null;
     
@@ -122,7 +125,8 @@ class LicenseVerificationService {
     return info;
     */
     
-    // Unreachable when testing mode is disabled, but kept for compilation
+    // This return is only reachable when testing mode is disabled
+    // It serves as a safe default if the above code is not uncommented
     return null;
   }
 }
