@@ -94,13 +94,9 @@ class BaseTemplates {
         ),
       ],
     ),
-    // Remaining templates are stubs
-    // Template 2: Organic Garland (Stub)
-    // Template 3: Column Design (Stub)
-    // Template 4: Centerpiece (Stub)
-    // Template 5: Wall Installation (Stub)
-    // Template 6: Ceiling Installation (Stub)
-    // Template 7: Number/Letter Display (Stub)
-    // Template 8: Bouquet Arrangement (Stub)
+    // NOTE: Remaining 7 templates (Organic Garland, Column Design, Centerpiece,
+    // Wall Installation, Ceiling Installation, Number/Letter Display, Bouquet
+    // Arrangement) are to be implemented as full template definitions in the future.
+    // The templates list currently contains only 1 concrete implementation.
   ];
 }

@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:balloon_design_studio/src/core/licensing/license_verification_service.dart';
 import 'package:balloon_design_studio/src/core/licensing/license_model.dart';
@@ -61,8 +62,7 @@ void main() {
       
       // Base64 encode the JSON
       final jsonString = '{"email":"test@example.com","issued_at":"${now.toIso8601String()}","expires_at":null,"max_devices":2}';
-      final dataBytes = jsonString.codeUnits;
-      final base64Data = base64Encode(dataBytes);
+      final base64Data = base64.encode(utf8.encode(jsonString));
       
       final token = LicenseToken(
         version: 'BLS1',
@@ -78,25 +78,4 @@ void main() {
       expect(result.isPerpetual, true);
     });
   });
-}
-
-// Helper function to encode strings to base64
-String base64Encode(List<int> bytes) {
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
-  final output = StringBuffer();
-  
-  for (var i = 0; i < bytes.length; i += 3) {
-    final b1 = bytes[i];
-    final b2 = i + 1 < bytes.length ? bytes[i + 1] : 0;
-    final b3 = i + 2 < bytes.length ? bytes[i + 2] : 0;
-    
-    final n = (b1 << 16) + (b2 << 8) + b3;
-    
-    output.write(chars[(n >> 18) & 63]);
-    output.write(chars[(n >> 12) & 63]);
-    output.write(i + 1 < bytes.length ? chars[(n >> 6) & 63] : '=');
-    output.write(i + 2 < bytes.length ? chars[n & 63] : '=');
-  }
-  
-  return output.toString();
 }

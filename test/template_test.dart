@@ -8,7 +8,9 @@ void main() {
     });
     
     test('Classic Balloon Arch template is correctly defined', () {
-      final classicArch = BaseTemplates.templates.first;
+      final classicArch = BaseTemplates.templates.firstWhere(
+        (t) => t.id == 'classic_arch_001',
+      );
       
       expect(classicArch.id, 'classic_arch_001');
       expect(classicArch.name, 'Classic Balloon Arch');
@@ -18,7 +20,9 @@ void main() {
     });
     
     test('Classic Balloon Arch has correct element quantities', () {
-      final classicArch = BaseTemplates.templates.first;
+      final classicArch = BaseTemplates.templates.firstWhere(
+        (t) => t.id == 'classic_arch_001',
+      );
       
       // Check total balloon count
       final totalBalloons = classicArch.elements.fold<int>(
@@ -30,7 +34,9 @@ void main() {
     });
     
     test('Classic Balloon Arch elements have required specifications', () {
-      final classicArch = BaseTemplates.templates.first;
+      final classicArch = BaseTemplates.templates.firstWhere(
+        (t) => t.id == 'classic_arch_001',
+      );
       
       for (final element in classicArch.elements) {
         expect(element.type, isNotEmpty);
@@ -43,7 +49,9 @@ void main() {
     });
     
     test('Template elements have valid positions', () {
-      final classicArch = BaseTemplates.templates.first;
+      final classicArch = BaseTemplates.templates.firstWhere(
+        (t) => t.id == 'classic_arch_001',
+      );
       
       for (final element in classicArch.elements) {
         expect(element.positionX, greaterThanOrEqualTo(0.0));
