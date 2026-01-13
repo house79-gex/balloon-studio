@@ -99,7 +99,7 @@ flutter pub get
 flutter pub run build_runner build --delete-conflicting-outputs
 ```
 
-   **Note**: For continuous generation during development, use:
+   For continuous generation during development, use:
 ```bash
 flutter pub run build_runner watch --delete-conflicting-outputs
 ```

@@ -13,8 +13,8 @@ dependencies:
     sdk: flutter
   
   # State Management
-  # Note: riverpod_annotation versioning is independent from flutter_riverpod
-  # flutter_riverpod 3.1.0 is compatible with riverpod_annotation 4.0.0
+  # Note: riverpod_annotation uses independent versioning from flutter_riverpod
+  # (4.x annotations work with 3.x core library)
   flutter_riverpod: ^3.1.0
   riverpod_annotation: ^4.0.0
   
