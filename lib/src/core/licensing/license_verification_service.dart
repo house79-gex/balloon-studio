@@ -18,8 +18,10 @@ class LicenseVerificationService {
   // TODO: Replace with actual Ed25519 public key before production deployment
   // This is a placeholder - in production, this should be hardcoded or securely stored
   // Example format: 'base64EncodedPublicKeyHere=='
+  // ignore: unused_field
   static const String _publicKeyBase64 = 'PLACEHOLDER_PUBLIC_KEY';
   
+  // ignore: unused_field
   final Ed25519 _algorithm = Ed25519();
   
   /// Verify a license token
