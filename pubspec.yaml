@@ -4,6 +4,8 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
+  # Flutter 3.38.6 uses Dart SDK 3.10.7
+  # Riverpod 3.x requires Dart SDK >=3.7.0
   sdk: '>=3.7.0 <4.0.0'
 
 dependencies:
@@ -11,6 +13,8 @@ dependencies:
     sdk: flutter
   
   # State Management
+  # Note: riverpod_annotation versioning is independent from flutter_riverpod
+  # flutter_riverpod 3.1.0 is compatible with riverpod_annotation 4.0.0
   flutter_riverpod: ^3.1.0
   riverpod_annotation: ^4.0.0
   
