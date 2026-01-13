@@ -14,7 +14,9 @@ final deviceIdProvider = FutureProvider<String>((ref) async {
   String? deviceId = prefs.getString('device_id');
   
   if (deviceId == null) {
-    // Generate a new device ID (simplified - in production use a better method)
+    // Generate a new device ID
+    // TODO: Use platform-specific device identifiers or cryptographically secure random ID
+    // Current implementation uses timestamp for simplicity - replace in production
     deviceId = DateTime.now().millisecondsSinceEpoch.toString();
     await prefs.setString('device_id', deviceId);
   }
