@@ -2,6 +2,31 @@
 
 A professional balloon art design application for tablets and phones.
 
+## ⚠️ TESTING MODE ACTIVE
+
+**License verification is currently DISABLED for testing purposes.**
+
+The app is configured to run in **Pro mode by default** without requiring a valid license token. This allows for testing all premium features without license activation.
+
+### To Re-enable License Verification:
+
+1. **In `lib/src/core/entitlements/entitlements_provider.dart`:**
+   - Uncomment the original license check code
+   - Remove the direct return of `EntitlementsConfig.pro`
+
+2. **In `lib/src/core/licensing/license_verification_service.dart`:**
+   - Set `_testingModeBypassVerification` to `false`
+   - Replace `_publicKeyBase64` with your actual Ed25519 public key
+   - Uncomment the original `verifyToken` and `validateLicense` implementations
+   - Remove the mock implementations
+
+3. **Test the license system:**
+   - Generate valid license tokens signed with your private key
+   - Verify tokens are properly validated
+   - Test expiration and device limits
+
+---
+
 ## Features
 
 ### Free Tier
