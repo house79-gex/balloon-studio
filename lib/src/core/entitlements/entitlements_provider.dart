@@ -4,6 +4,17 @@ import 'package:balloon_design_studio/src/core/licensing/license_provider.dart';
 
 /// Provider for current entitlements based on license status
 final entitlementsProvider = Provider<EntitlementsConfig>((ref) {
+  // TODO: TESTING MODE - License verification bypassed
+  // To re-enable license verification:
+  // 1. Uncomment the code below that checks licenseProvider
+  // 2. Remove the direct return of EntitlementsConfig.pro
+  // 3. Restore signature verification in license_verification_service.dart
+  // 4. Set the actual public key in license_verification_service.dart
+  
+  // TESTING MODE: Always return Pro entitlements without license check
+  return EntitlementsConfig.pro;
+  
+  /* ORIGINAL LICENSE CHECK CODE - COMMENTED OUT FOR TESTING
   final license = ref.watch(licenseProvider);
   
   return license.when(
@@ -16,6 +27,7 @@ final entitlementsProvider = Provider<EntitlementsConfig>((ref) {
     loading: () => EntitlementsConfig.free,
     error: (_, __) => EntitlementsConfig.free,
   );
+  */
 });
 
 /// Provider to check if user can create a new project
