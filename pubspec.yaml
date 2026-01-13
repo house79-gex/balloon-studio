@@ -46,8 +46,8 @@ dev_dependencies:
   mockito: ^5.4.0
 
 dependency_overrides:
-  analyzer: ^6.11.0
-  _fe_analyzer_shared: ^68.0.0
+  analyzer: ^6.8.0
+  _fe_analyzer_shared: ^62.0.0
 
 flutter:
   uses-material-design: true
