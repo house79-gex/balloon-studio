@@ -1,6 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:balloon_design_studio/src/core/entitlements/entitlements_config.dart';
-import 'package:balloon_design_studio/src/core/licensing/license_provider.dart';
 
 /// Provider for current entitlements based on license status
 final entitlementsProvider = Provider<EntitlementsConfig>((ref) {
