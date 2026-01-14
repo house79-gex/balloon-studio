@@ -4,7 +4,43 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased] - 2026-01-14
 
+### Added
+- **Italian Localization:**
+  - Integrated Flutter gen-l10n for localization support
+  - Created Italian ARB file (app_it.arb) with all user-facing strings
+  - Configured app to be Italian-only (no English fallback)
+  - Added flutter_localizations dependency
+  - All UI text now uses localized strings
+
+- **Navigation and UI Screens:**
+  - Created ProjectsScreen for viewing and managing balloon design projects
+  - Created TemplatesScreen for browsing design templates
+  - Implemented navigation from HomeScreen to Projects and Templates
+  - Fixed tap handling on all HomeScreen cards and buttons
+  - Navigation now works correctly for all interactive elements
+
 ### Fixed
+- **Layout Overflow Issues:**
+  - Wrapped HomeScreen body in SafeArea and SingleChildScrollView to prevent bottom overflow
+  - Used Flexible widgets in card content to prevent text overflow
+  - Configured GridView with shrinkWrap in scrollable context
+  - Added proper padding and spacing to avoid layout issues on different screen sizes
+  - Fixed potential overflow in Projects and Templates card layouts
+
+- **Tap/Gesture Handling:**
+  - All HomeScreen cards now properly navigate to their respective screens
+  - Projects card navigates to ProjectsScreen
+  - Templates card navigates to TemplatesScreen
+  - Floating action button navigates to create new project
+  - InkWell widgets properly configured with onTap callbacks
+
+### Changed
+- **Localization Configuration:**
+  - Added l10n.yaml configuration file
+  - Updated pubspec.yaml to enable code generation with `generate: true`
+  - Updated MaterialApp to include Italian locale and localization delegates
+  - Set default and supported locale to Italian only
+
 - **Android Build Resource Restoration:**
   - Created missing Android resources to fix manifest linking failures:
     - values/styles.xml with LaunchTheme and NormalTheme definitions
