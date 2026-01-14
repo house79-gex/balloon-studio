@@ -51,11 +51,12 @@ The app is configured to run in **Pro mode by default** without requiring a vali
 
 ## Technology Stack
 
-- **Framework**: Flutter 3.38.6
-- **State Management**: Riverpod
-- **Database**: Isar (local/offline)
+- **Framework**: Flutter 3.38.6 (Dart SDK 3.10.7)
+- **State Management**: Riverpod 3.x/4.x (flutter_riverpod ^3.1.0, riverpod_annotation ^4.0.0)
+- **Database**: Isar 3.1.0 (local/offline)
 - **PDF Generation**: pdf + printing packages
 - **Licensing**: Ed25519 signature verification
+- **Build Tools**: AGP 8.5.0, Gradle 8.7, Kotlin 1.9.22
 
 ## Project Structure
 
@@ -83,7 +84,7 @@ lib/
 ## Getting Started
 
 ### Prerequisites
-- Flutter SDK 3.38.6 or compatible
+- Flutter SDK 3.38.6 or compatible (Dart SDK 3.10.7+)
 - Android Studio / Xcode for mobile development
 
 ### Installation
@@ -93,14 +94,40 @@ lib/
 flutter pub get
 ```
 
-2. Run code generation:
+2. Run code generation (generates *.g.dart files for Isar models and Riverpod providers):
 ```bash
 flutter pub run build_runner build --delete-conflicting-outputs
+```
+
+   For continuous generation during development, use:
+```bash
+flutter pub run build_runner watch --delete-conflicting-outputs
 ```
 
 3. Run the app:
 ```bash
 flutter run
+```
+
+### Development
+
+#### Code Generation
+This project uses code generation for:
+- **Isar database models** (*.g.dart files)
+- **Riverpod providers** (when using @riverpod annotations)
+
+Always run code generation after:
+- Modifying Isar model classes
+- Adding/updating @riverpod annotated providers
+- Pulling changes that affect generated code
+
+#### Linting and Formatting
+```bash
+# Run static analysis
+flutter analyze
+
+# Format code
+dart format .
 ```
 
 ## License Format
