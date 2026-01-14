@@ -4,8 +4,8 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  # Flutter 3.38.6 uses Dart SDK 3.10.7
-  # Riverpod 3.x requires Dart SDK >=3.7.0
+  # Dart SDK >=3.7.0 required for language features
+  # Flutter 3.38.6+ recommended (uses Dart SDK 3.10.7+)
   sdk: '>=3.7.0 <4.0.0'
 
 dependencies:

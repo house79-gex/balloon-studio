@@ -51,12 +51,12 @@ The app is configured to run in **Pro mode by default** without requiring a vali
 
 ## Technology Stack
 
-- **Framework**: Flutter 3.38.6 (Dart SDK 3.10.7)
-- **State Management**: Riverpod 3.x/4.x (flutter_riverpod ^3.1.0, riverpod_annotation ^4.0.0)
-- **Database**: Isar 3.1.0 (local/offline)
+- **Framework**: Flutter 3.38.6+ (Dart SDK 3.7.0+)
+- **State Management**: Riverpod 2.x (flutter_riverpod ^2.4.0, riverpod_annotation ^2.3.0)
+- **Database**: Isar 3.1.0 (local/offline, compatible with source_gen 1.x)
 - **PDF Generation**: pdf + printing packages
 - **Licensing**: Ed25519 signature verification
-- **Build Tools**: AGP 8.5.0, Gradle 8.7, Kotlin 1.9.22
+- **Build Tools**: AGP 8.1.1, Gradle 8.7, Kotlin 1.9.22, build_runner ^2.4.x
 
 ## Project Structure
 
@@ -84,7 +84,7 @@ lib/
 ## Getting Started
 
 ### Prerequisites
-- Flutter SDK 3.38.6 or compatible (Dart SDK 3.10.7+)
+- Flutter SDK 3.38.6 or compatible (Dart SDK 3.7.0+, Flutter 3.38.6 uses Dart SDK 3.10.7)
 - Android Studio / Xcode for mobile development
 
 ### Installation
