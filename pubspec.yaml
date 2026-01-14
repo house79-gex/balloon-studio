@@ -11,42 +11,27 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  
-  # State Management
-  # Note: riverpod_annotation uses independent versioning from flutter_riverpod
-  # (4.x annotations work with 3.x core library)
-  flutter_riverpod: ^3.1.0
-  riverpod_annotation: ^4.0.0
-  
-  # Database
+  flutter_riverpod: ^2.4.0
+  riverpod_annotation: ^2.3.0
+  riverpod: ^2.4.0
   isar: ^3.1.0
   isar_flutter_libs: ^3.1.0
   path_provider: ^2.1.0
-  
-  # PDF and Printing
   pdf: ^3.10.0
   printing: ^5.11.0
-  
-  # Crypto for License Verification
   cryptography: ^2.5.0
   ed25519_edwards: ^0.3.1
-  
-  # Utilities
   uuid: ^4.0.0
-  intl: ^0.20.0
+  intl: ^0.18.0
   shared_preferences: ^2.2.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^6.0.0
-  
-  # Code Generation
-  build_runner: ^2.10.0
-  riverpod_generator: ^4.0.0
+  flutter_lints: ^3.0.0
+  build_runner: ^2.4.13
+  riverpod_generator: ^2.4.0
   isar_generator: ^3.1.0
-  
-  # Testing
   mockito: ^5.4.0
 
 flutter:
