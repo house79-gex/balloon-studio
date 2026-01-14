@@ -145,6 +145,12 @@ The token is verified using Ed25519 signature verification.
 - **App Name**: Balloon Design Studio
 - **Min SDK**: 21
 - **Target SDK**: 34
+- **Compile SDK**: 36
+
+### Android Build Notes
+- AGP 8.1.1 and Kotlin 1.9.22 are maintained for compatibility with isar_flutter_libs 3.1.x
+- Namespace shim for isar_flutter_libs applied in android/build.gradle to handle missing namespace declaration
+- Required Android resources (styles, launcher icons, launch background) are included
 
 ## iOS Configuration
 

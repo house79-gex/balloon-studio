@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased] - 2026-01-14
 
+### Fixed
+- **Android Build Resource Restoration:**
+  - Created missing Android resources to fix manifest linking failures:
+    - values/styles.xml with LaunchTheme and NormalTheme definitions
+    - drawable/launch_background.xml for splash screen
+    - mipmap-*/ic_launcher.png launcher icons for all densities (mdpi, hdpi, xhdpi, xxhdpi, xxxhdpi)
+  - Set compileSdk to 36 in android/app/build.gradle to satisfy path_provider_android and shared_preferences_android requirements (targetSdk remains 34)
+  - Applied namespace shim for isar_flutter_libs (3.1.0+1) to set namespace 'dev.isar.flutter.libs' and strip obsolete package attribute from AndroidManifest.xml at build time
+
 ### Changed
 - **Build Compatibility Restoration:**
   - Verified Riverpod 2.x configuration (flutter_riverpod ^2.4.0, riverpod_annotation ^2.3.0, riverpod_generator ^2.4.0)
@@ -31,8 +40,13 @@ All notable changes to this project will be documented in this file.
 ### Compatibility
 - Flutter: 3.38.6+
 - Dart SDK: 3.7.0+ (Flutter 3.38.6 uses Dart SDK 3.10.7)
-- Android: Min SDK 21, Target SDK 34, Compile SDK 34
+- Android: Min SDK 21, Target SDK 34, Compile SDK 36
 - iOS: Min version 12.0
+
+### Known Issues
+- AGP 8.1.1 and Kotlin 1.9.22 show deprecation warnings but are maintained for isar_flutter_libs 3.1.x compatibility
+- isar_flutter_libs 3.1.x lacks native namespace declaration; namespace shim applied in android/build.gradle
+- No AGP/Kotlin major version bump planned until isar dependency is updated
 
 ### Build & Test Commands
 ```bash
