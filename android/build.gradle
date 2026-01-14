@@ -35,3 +35,21 @@ subprojects { project ->
         }
     }
 }
+subprojects { project ->
+    if (project.name == "isar_flutter_libs") {
+        project.plugins.withId("com.android.library") {
+            project.android {
+                namespace "dev.isar.flutter.libs"
+            }
+            // Rimuove il package dal Manifest del plugin
+            def manifestFile = file("${project.projectDir}/src/main/AndroidManifest.xml")
+            if (manifestFile.exists()) {
+                def text = manifestFile.getText("UTF-8")
+                def replaced = text.replace('package="dev.isar.isar_flutter_libs"', "")
+                if (replaced != text) {
+                    manifestFile.write(replaced, "UTF-8")
+                }
+            }
+        }
+    }
+}
