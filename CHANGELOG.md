@@ -19,7 +19,7 @@ All notable changes to this project will be documented in this file.
 
 ### Rationale
 - **Riverpod 2.x**: Maintained for compatibility with Isar 3.1.0 and source_gen 1.x
-  - Isar 3.1.0 requires source_gen ^1.x.x which constrains build_runner to ~2.4.x
+  - Isar 3.1.0 requires source_gen ^1.x which constrains build_runner to ~2.4.x
   - Riverpod 2.x works well with build_runner 2.4.x
   - Riverpod 3.x/4.x requires newer build tooling not compatible with current Isar version
   
