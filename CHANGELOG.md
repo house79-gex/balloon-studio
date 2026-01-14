@@ -30,7 +30,7 @@ All notable changes to this project will be documented in this file.
 
 ### Compatibility
 - Flutter: 3.38.6+
-- Dart SDK: 3.7.0+
+- Dart SDK: 3.7.0+ (Flutter 3.38.6 uses Dart SDK 3.10.7)
 - Android: Min SDK 21, Target SDK 34, Compile SDK 34
 - iOS: Min version 12.0
 
