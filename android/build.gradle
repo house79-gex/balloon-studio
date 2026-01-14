@@ -26,3 +26,12 @@ buildscript {
         classpath "com.android.tools.build:gradle:8.1.1"
     }
 }
+subprojects { project ->
+    if (project.name == "isar_flutter_libs") {
+        project.plugins.withId("com.android.library") {
+            project.android {
+                namespace "dev.isar.flutter.libs"
+            }
+        }
+    }
+}
