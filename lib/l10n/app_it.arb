@@ -1,0 +1,209 @@
+{
+  "@@locale": "it",
+  "appTitle": "Balloon Design Studio",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "welcomeMessage": "Benvenuto a Balloon Design Studio",
+  "@welcomeMessage": {
+    "description": "Welcome message on home screen"
+  },
+  "yourPlan": "Il Tuo Piano: {plan}",
+  "@yourPlan": {
+    "description": "User's subscription plan label",
+    "placeholders": {
+      "plan": {
+        "type": "String",
+        "example": "PRO"
+      }
+    }
+  },
+  "projects": "Progetti",
+  "@projects": {
+    "description": "Projects label"
+  },
+  "projectsDescription": "Gestisci i tuoi design di palloncini",
+  "@projectsDescription": {
+    "description": "Projects feature description"
+  },
+  "templates": "Modelli",
+  "@templates": {
+    "description": "Templates label"
+  },
+  "templatesDescription": "Sfoglia i modelli di design",
+  "@templatesDescription": {
+    "description": "Templates feature description"
+  },
+  "pricing": "Prezzi",
+  "@pricing": {
+    "description": "Pricing label"
+  },
+  "pricingDescription": "Configura i prezzi",
+  "@pricingDescription": {
+    "description": "Pricing feature description"
+  },
+  "export": "Esporta",
+  "@export": {
+    "description": "Export label"
+  },
+  "exportDescription": "Esporta design e preventivi",
+  "@exportDescription": {
+    "description": "Export feature description"
+  },
+  "newProject": "Nuovo Progetto",
+  "@newProject": {
+    "description": "New project button label"
+  },
+  "projectsLimit": "Progetti: {count}",
+  "@projectsLimit": {
+    "description": "Projects limit label",
+    "placeholders": {
+      "count": {
+        "type": "String",
+        "example": "5"
+      }
+    }
+  },
+  "elementsLimit": "Elementi: {count}",
+  "@elementsLimit": {
+    "description": "Elements per project limit label",
+    "placeholders": {
+      "count": {
+        "type": "String",
+        "example": "10"
+      }
+    }
+  },
+  "unlimited": "Illimitato",
+  "@unlimited": {
+    "description": "Unlimited label"
+  },
+  "professionalPdf": "PDF Professionale",
+  "@professionalPdf": {
+    "description": "Professional PDF feature label"
+  },
+  "imageExport": "Esportazione Immagini",
+  "@imageExport": {
+    "description": "Image export feature label"
+  },
+  "aiEnabled": "AI Abilitata ({count}/giorno)",
+  "@aiEnabled": {
+    "description": "AI enabled feature label with daily request count",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "10"
+      }
+    }
+  },
+  "myProjects": "I Miei Progetti",
+  "@myProjects": {
+    "description": "My projects screen title"
+  },
+  "noProjects": "Nessun progetto ancora",
+  "@noProjects": {
+    "description": "No projects message"
+  },
+  "createFirstProject": "Crea il tuo primo progetto per iniziare",
+  "@createFirstProject": {
+    "description": "Create first project hint"
+  },
+  "projectName": "Nome Progetto",
+  "@projectName": {
+    "description": "Project name label"
+  },
+  "projectDescription": "Descrizione",
+  "@projectDescription": {
+    "description": "Project description label"
+  },
+  "clientName": "Nome Cliente",
+  "@clientName": {
+    "description": "Client name label"
+  },
+  "eventType": "Tipo Evento",
+  "@eventType": {
+    "description": "Event type label"
+  },
+  "eventDate": "Data Evento",
+  "@eventDate": {
+    "description": "Event date label"
+  },
+  "status": "Stato",
+  "@status": {
+    "description": "Status label"
+  },
+  "draft": "Bozza",
+  "@draft": {
+    "description": "Draft status"
+  },
+  "inProgress": "In Corso",
+  "@inProgress": {
+    "description": "In progress status"
+  },
+  "completed": "Completato",
+  "@completed": {
+    "description": "Completed status"
+  },
+  "archived": "Archiviato",
+  "@archived": {
+    "description": "Archived status"
+  },
+  "elementsCount": "{count} elementi",
+  "@elementsCount": {
+    "description": "Elements count label",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "5"
+      }
+    }
+  },
+  "designTemplates": "Modelli di Design",
+  "@designTemplates": {
+    "description": "Design templates screen title"
+  },
+  "noTemplates": "Nessun modello disponibile",
+  "@noTemplates": {
+    "description": "No templates message"
+  },
+  "proOnly": "Solo PRO",
+  "@proOnly": {
+    "description": "Pro only badge"
+  },
+  "useTemplate": "Usa Modello",
+  "@useTemplate": {
+    "description": "Use template button"
+  },
+  "cancel": "Annulla",
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "save": "Salva",
+  "@save": {
+    "description": "Save button"
+  },
+  "create": "Crea",
+  "@create": {
+    "description": "Create button"
+  },
+  "delete": "Elimina",
+  "@delete": {
+    "description": "Delete button"
+  },
+  "edit": "Modifica",
+  "@edit": {
+    "description": "Edit button"
+  },
+  "back": "Indietro",
+  "@back": {
+    "description": "Back button"
+  },
+  "createProject": "Crea Progetto",
+  "@createProject": {
+    "description": "Create project screen title"
+  },
+  "required": "Obbligatorio",
+  "@required": {
+    "description": "Required field validation message"
+  }
+}
