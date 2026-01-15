@@ -15,7 +15,7 @@ The application has been localized to Italian. All user-facing text, menus, and 
   - `intl: ^0.20.2` (compatible with Flutter SDK's flutter_localizations)
   - `flutter_localizations` (from Flutter SDK)
 - **Configuration**: 
-  - `l10n.yaml` defines ARB file location and output settings (deprecated `synthetic-package` flag removed)
+  - `l10n.yaml` defines ARB file location and output settings using standard Flutter localization generation
   - `lib/l10n/app_it.arb` contains all Italian translations
   - `pubspec.yaml` has `generate: true` to enable code generation
 - **Generated Code**: `flutter gen-l10n` creates `AppLocalizations` class in `flutter_gen/gen_l10n/`
