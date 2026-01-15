@@ -5,15 +5,39 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased] - 2026-01-15
 
 ### Fixed
-- **Deprecated API Updates:**
-  - Replaced deprecated `Color.withOpacity()` with `Color.withValues(alpha:)` in templates_screen.dart and projects_screen.dart
-  - Updated 3 occurrences to use the new Flutter API for color opacity
+- **Localization Configuration:**
+  - Removed deprecated `synthetic-package: true` flag from l10n.yaml
+  - This flag is no longer supported in recent Flutter SDK versions
+  - Generated localizations will now use the default package location (flutter_gen/gen_l10n)
 
-### Changed
-- **Localization Setup:**
-  - Verified intl ^0.20.2 dependency configuration (compatible with flutter_localizations)
-  - Confirmed l10n.yaml configuration and Italian ARB file (app_it.arb)
-  - Ensured AppLocalizations properly imported and used throughout the app
+### Verified
+- **Dependencies:**
+  - Confirmed intl ^0.20.2 is set in pubspec.yaml (compatible with flutter_localizations)
+  - Verified flutter_localizations is declared in dependencies
+  
+- **Localization Configuration:**
+  - l10n.yaml properly configured with:
+    - arb-dir: lib/l10n
+    - template-arb-file: app_it.arb
+    - output-localization-file: app_localizations.dart
+    - output-class: AppLocalizations
+    - nullable-getter: false
+    - untranslated-messages-file: untranslated_messages.txt
+  
+- **ARB File (lib/l10n/app_it.arb):**
+  - Contains comprehensive Italian translations for all app screens
+  - Includes Home, Projects, Templates screens
+  - All placeholders and metadata properly defined
+  
+- **App Wiring:**
+  - MaterialApp configured with Italian locale and localization delegates
+  - All screens properly import and use AppLocalizations.of(context)!
+  - No deprecated Color.withOpacity() usage (already using withValues())
+
+### Italian-Only Localization
+- The app is configured for Italian-only with no English fallback
+- Locale set to 'it' with supportedLocales [Locale('it')]
+- Structure is extensible for adding more languages in the future
 
 ## [Unreleased] - 2026-01-14
 
