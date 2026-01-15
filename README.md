@@ -8,6 +8,21 @@ A professional balloon art design application for tablets and phones.
 
 The application has been localized to Italian. All user-facing text, menus, and messages are in Italian.
 
+### Localization Configuration
+
+- **Framework**: Flutter's built-in localization (flutter_gen/gen_l10n)
+- **Dependencies**: 
+  - `intl: ^0.20.2` (compatible with Flutter SDK's flutter_localizations)
+  - `flutter_localizations` (from Flutter SDK)
+- **Configuration**: 
+  - `l10n.yaml` defines ARB file location and output settings
+  - `lib/l10n/app_it.arb` contains all Italian translations
+  - `pubspec.yaml` has `generate: true` to enable code generation
+- **Generated Code**: `flutter gen-l10n` creates `AppLocalizations` class
+- **Usage**: Import `package:flutter_gen/gen_l10n/app_localizations.dart` and use `AppLocalizations.of(context)`
+
+The app is configured to support only Italian locale (`it`), with no English fallback. The structure is extensible for adding more languages in the future by adding additional ARB files (e.g., `app_en.arb`).
+
 ## ⚠️ TESTING MODE ACTIVE
 
 **License verification is currently DISABLED for testing purposes.**
