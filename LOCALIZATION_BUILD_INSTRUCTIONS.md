@@ -88,12 +88,13 @@ flutter build apk --debug
 
 ### Generated Files
 After running `flutter gen-l10n`, the following files should be generated:
-- `flutter_gen/gen_l10n/app_localizations.dart`
-- `flutter_gen/gen_l10n/app_localizations_it.dart`
+- Localization delegate files in the generated location
+- `app_localizations.dart` - Main localization class
+- `app_localizations_it.dart` - Italian translations implementation
 
 These are imported as `package:flutter_gen/gen_l10n/app_localizations.dart` in the code.
 
-Note: The generated files are created in the `flutter_gen` directory at the project root, not in `.dart_tool`.
+**Note**: The exact directory location of generated files depends on Flutter SDK version and configuration. The files are accessible via the `flutter_gen` package import regardless of their physical location on disk.
 
 ### Analysis Results
 `flutter analyze` should complete without errors related to:
