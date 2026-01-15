@@ -46,6 +46,10 @@ linked_*.ds
 unlinked.ds
 unlinked_spec.ds
 
+# Generated localization files (may be in flutter_gen or .dart_tool/flutter_gen)
+flutter_gen/
+.dart_tool/flutter_gen/
+
 # Android related
 **/android/**/gradle-wrapper.jar
 .gradle/
