@@ -2,6 +2,12 @@
 
 A professional balloon art design application for tablets and phones.
 
+## 🇮🇹 Language / Lingua
+
+**This app is Italian-only** / **Questa app è solo in italiano**
+
+The application has been localized to Italian. All user-facing text, menus, and messages are in Italian.
+
 ## ⚠️ TESTING MODE ACTIVE
 
 **License verification is currently DISABLED for testing purposes.**
@@ -94,7 +100,12 @@ lib/
 flutter pub get
 ```
 
-2. Run code generation (generates *.g.dart files for Isar models and Riverpod providers):
+2. Generate localization files:
+```bash
+flutter gen-l10n
+```
+
+3. Run code generation (generates *.g.dart files for Isar models and Riverpod providers):
 ```bash
 flutter pub run build_runner build --delete-conflicting-outputs
 ```
@@ -104,7 +115,7 @@ flutter pub run build_runner build --delete-conflicting-outputs
 flutter pub run build_runner watch --delete-conflicting-outputs
 ```
 
-3. Run the app:
+4. Run the app:
 ```bash
 flutter run
 ```
