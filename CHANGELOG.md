@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Unreleased] - 2026-01-15
+
+### Fixed
+- **Deprecated API Updates:**
+  - Replaced deprecated `Color.withOpacity()` with `Color.withValues(alpha:)` in templates_screen.dart and projects_screen.dart
+  - Updated 3 occurrences to use the new Flutter API for color opacity
+
+### Changed
+- **Localization Setup:**
+  - Verified intl ^0.20.2 dependency configuration (compatible with flutter_localizations)
+  - Confirmed l10n.yaml configuration and Italian ARB file (app_it.arb)
+  - Ensured AppLocalizations properly imported and used throughout the app
+
 ## [Unreleased] - 2026-01-14
 
 ### Added
